@@ -1,37 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebTHing.Models;
-
-namespace WebTHing.Controllers
+namespace WebThing.Controllers
 {
     public class HomeController : Controller
     {
+        // localhost:5000/
         [Route("")]
         public ViewResult Index()
         {
             return View();
         }
-
-        [Route("login")]
-        public IActionResult Login()
+        // localhost:5000/:turtle
+        [Route("{turtle}")]
+        public ViewResult Ninja(string turtle)
         {
-            bool isValid = true;
-            if(isValid)
-            {
-                // return redirect
-                return Redirect("");
-            }
-            else
-            {
-                // return view
-                return View();
-            }
-        }
+            ViewBag.Ninja = turtle;
 
-        
+            return View();
+        }
     }
 }

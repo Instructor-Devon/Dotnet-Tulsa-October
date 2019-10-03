@@ -8,9 +8,17 @@
     <title>Hello ASP</title>
 </head>
 <body>
+    @{
+        string imgPath = $"img/{ViewBag.Ninja}.png";
+        string[] turtles = new string[]
+        {
+            "leonardo", "donatello", "michelangelo", "raphiel"
+        };
+    }
     <div id="container">
         <div id="home">
-            <h1>Home</h1>
+            <h1>@ViewBag.Ninja's Cool Page!</h1>
+            <img src="@imgPath" alt="@ViewBag.Ninja-pic">
         </div>
     </div>
 </body>
