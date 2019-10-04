@@ -1,0 +1,38 @@
+@using WebThing.Models
+@model List<NinjaTurtle>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Hello ASP</title>
+</head>
+<body>
+    <div id="container">
+        <div id="home">
+            <h1>Home</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Weapon</th>
+                        <th>Skill</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var turtle in Model)
+                {
+                    <tr>
+                        <td>@turtle.Name</td>
+                        <td>@turtle.Weapon</td>
+                        <td>@turtle.Skill</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

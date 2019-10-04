@@ -1,0 +1,14 @@
+body {
+    background: url("/img/sewer-bg.jpg");
+    font-size: 100%;
+  }
+  h1 {
+    font-family: 'Mansalva','Consolas', monospace;
+    color: rgb(0, 250, 0);
+    text-shadow: 2px 2px #cc91ed;
+    font-size: 7em;
+    margin: 0;
+  }
+  #home {
+    padding: 75px;
+  }
