@@ -1,0 +1,12 @@
+﻿body {
+  background-color: rgb(146, 146, 146);
+  padding: 20px;
+}
+form {
+  width: 50%;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  display: block;
+}

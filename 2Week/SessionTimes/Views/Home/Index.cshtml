@@ -1,0 +1,9 @@
+<h1>Session Games</h1>
+<h2>Clicker</h2>
+<h3>@ViewBag.Count</h3>
+<a href="/click"><button>+</button></a>
+<h3>For fun here are some ninjas:</h3>
+@foreach (var item in ViewBag.Ninjas)
+{
+    <p>@item.Name (@item.Color)</p>
+}
