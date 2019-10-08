@@ -1,0 +1,22 @@
+﻿<h1>Here are some Ninjas!</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Email</th>
+            <th>Bio</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var turtle in ViewBag.Ninjas)
+    {
+        <tr>
+            <td><a href='/ninja/@turtle["NinjaId"]'>@turtle["Name"]</a></td>
+            <td>@turtle["Color"]</td>
+            <td>@turtle["Email"]</td>
+            <td>@turtle["Bio"]</td>
+        </tr>
+    }
+    </tbody>
+</table>
