@@ -11,7 +11,7 @@ namespace WebThing.Controllers
         }
         // localhost:5000/:turtle
         [Route("{turtle}")]
-        public ViewResult Ninja(string turtle)
+        public ViewResult Ninja(string turtle, [FromQuery] bool ListArtists)
         {
             ViewBag.Ninja = turtle;
 
