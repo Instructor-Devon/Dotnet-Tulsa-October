@@ -1,0 +1,16 @@
+@model Post
+<h1>Make a Post:</h1>
+<form asp-controller="Dashboard" asp-action="Create" method="post">
+    <input type="hidden" asp-for="UserId">
+    <div class="form-group">
+        <span asp-validation-for="Title"></span>
+        <label asp-for="Title"></label>
+        <input asp-for="Title">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Content"></span>
+        <label asp-for="Content"></label>
+        <textarea asp-for="Content"></textarea>
+    </div>
+    <button>POST IT!</button>
+</form>

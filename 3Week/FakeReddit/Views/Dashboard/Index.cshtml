@@ -1,0 +1,30 @@
+@model List<Post>
+@{
+    Post emptyPost = new Post()
+    {
+        UserId = ViewBag.UserId,
+    };
+}
+<partial name="NewPostPartial" model="emptyPost" view-data="ViewData" >
+<h1>Here are all POSTS</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>User</th>
+            <th>Post</th>
+            <th>Date Posted</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var post in Model)
+    {
+        <tr>
+            <td>@post.Title</td>
+            <td>@post.Author.FullName</td>
+            <td>@post.Content</td>
+            <td>@post.CreatedAt</td>
+        </tr>
+    }
+    </tbody>
+</table>
